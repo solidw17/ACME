@@ -5,5 +5,5 @@ export interface Patient {
     cpf: string;
     sexo: string;
     endereco: string;
-    status: string;
+    status: boolean;
 }

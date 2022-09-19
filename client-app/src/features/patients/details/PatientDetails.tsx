@@ -14,7 +14,7 @@ export default function PatientDetails({patient, cancelSelectPatient, openForm}:
             <Card.Content>
                 <Card.Header>{patient.nome}</Card.Header>
                 <Card.Meta>
-                    <span>{patient.dataNascimento}</span>
+                    <span>{patient.dataNascimento.split('T')[0]}</span>
                 </Card.Meta>
                 <Card.Description>
                     <div>{patient.cpf.substring(0, 3) + '.' + patient.cpf.substring(3, 6) + '.' + patient.cpf.substring(6, 9) + '-' + patient.cpf.substring(9, 11)}</div>
