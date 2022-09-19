@@ -1,4 +1,4 @@
-import React, { SyntheticEvent, useEffect, useState } from 'react';
+import React, { SyntheticEvent, useState } from 'react';
 import { Button, Item, Label, Segment } from 'semantic-ui-react';
 import { Patient } from '../../../app/models/patient';
 
@@ -11,11 +11,6 @@ interface Props{
 
 export default function PatientList({patients, selectPatient, deletePatient, submitting}: Props){
     const[target, setTarget] = useState('');
-    const[sampleData, setSampleData] = useState([]);
-
-    useEffect(() => {
-        setSampleData()
-    })
 
     function handlePatientDelete(e: SyntheticEvent<HTMLButtonElement>, id: string) {
         setTarget(e.currentTarget.name);
@@ -26,7 +21,6 @@ export default function PatientList({patients, selectPatient, deletePatient, sub
         const sortedData = [...patients].sort((a,b) => {
             return a.nome > b.nome ? 1 : -1
         })
-
     }
 
     return (
