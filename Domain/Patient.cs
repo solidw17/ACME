@@ -10,16 +10,15 @@ namespace Domain
     {
             public Guid Id { get; set; }
             [Required]
-            public string? Nome { get; set; }
+            public string Nome { get; set; }
             [Required]
             public DateTime DataNascimento { get; set; }
             [Required]
             [StringLength(11)]
-            public string? CPF { get; set; }
+            public string CPF { get; set; }
             [Required]
-            public string? Sexo { get; set; }
-            [Required]
-            public string? Endereco { get; set; }
+            public string Sexo { get; set; }
+            public string Endereco { get; set; }
             public bool Status { get; set; }    
     }
 }
